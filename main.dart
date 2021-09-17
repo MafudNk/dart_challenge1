@@ -1,24 +1,18 @@
 import 'dart:io';
-import 'menu.dart';
-import 'ulangi.dart';
+import 'importir.dart';
 
 void main() {
-   String choose;
-  do{
+  String choose;
+  do {
     menuUtama();
 
-  stdout.write('Masukkan pilihan : ');
-  int pilihan = int.parse(stdin.readLineSync()!);
-  print(pilihan);
-  ulangi();
-  choose = stdin.readLineSync()!.toString();
+    stdout.write('Masukkan pilihan : ');
+    int pilihan = int.parse(stdin.readLineSync()!);
 
-  } 
-  while(choose == 'Y' || choose == 'y');
+    perhitungan(pilihan);
+
+    ulangi();
+    choose = stdin.readLineSync()!.toString();
+  } while (choose == 'Y' || choose == 'y');
   print('Program Selesai');
-  
-
-  
 }
-
-
